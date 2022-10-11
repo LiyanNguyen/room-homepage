@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+:root {
+	/* PRIMARY COLORS */
+	--darkGray: hsl(0, 0%, 63%);
+	--black: hsl(0, 0%, 0%);
+	--white: hsl(0, 0%, 100%);
+	--veryDarkGray: hsl(0, 0%, 27%);
+	font-family: 'League Spartan', sans-serif;
+	font-size: 12px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.WIP {
+	display: none;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	min-height: 5rem;
+	display: flex;
+	align-items: center;
+	gap: 5rem;
+	padding: 5rem;
+}
+
+nav ul {
+	display: flex;
+	gap: 2.5rem;
+	list-style: none;
+}
+
+nav ul li {
+	cursor: pointer;
+	color: var(--white);
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: .25rem;
+	justify-content: center;
+}
+
+nav ul li::after {
+	content: '';
+	width: 0;
+	height: .2rem;
+	background-color: var(--white);
+	transition: 0.25s ease;
+	position: relative;
+	left: 50%;
+}
+
+nav ul li:hover::after {
+	width: 100%;
+	left: 0;
+}
+
+.top {
+	display: flex;
+}
+
+.top .heroImg {
+ min-width: 840px;
+ min-height: 543px;
+}
+
+.top .heroImg img {
+	width: 100%;
+	height: 100%;
+}
+
+.top article {
+	display: flex;
+	flex-direction: column;
+	padding: 8.5rem;
+	padding-bottom: 0;
+	gap: 2rem;
+	position: relative;
+}
+
+.top article h1 {
+	font-size: 3.5rem;
+}
+
+.top article p {
+	color: var(--darkGray);
+	line-height: 1.5;
+	font-size: 1.25rem;
+}
+
+.top article a {
+	color: var(--black);
+	line-height: 1.5;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1.25rem;
+	width: max-content;
+	font-weight: 600;
+	transition: 0.25s ease;
+}
+
+.top article a:hover {
+	color: var(--darkGray);
+}
+
+.top article button {
+	position: absolute;
+	bottom: 0;
+	padding: 2rem 3.2rem;
+	border: none;
+	background-color: var(--black);
+	color: white;
+	cursor: pointer;
+	transition: 0.25s ease;
+}
+
+.top article button:disabled {
+	cursor: not-allowed;
+}
+
+.top article button:hover {
+	background-color: var(--darkGray);
+}
+
+.top article button.previous {
+	left: 0;
+}
+
+.top article button.next {
+	left: 7.5rem;
+}
+
+.bottom {
+	display: flex;
+	justify-content: space-between;
+	max-height: 266px;
+	overflow-y: hidden;
+}
+
+.bottomImgContainer {
+	min-width: 420px;
+	min-height: 266px;
+}
+
+.bottomImgContainer img {
+	width: 100%;
+	height: 100%;
+}
+
+.bottom article {
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 5rem;
+	gap: 2rem;
+}
+
+.bottom article h2 {
+	color: var(--black);
+	text-transform: uppercase;
+	letter-spacing: .4rem;
+	font-size: 1.65rem;
+}
+
+.bottom article p {
+	color: var(--darkGray);
+	line-height: 1.5;
+	font-size: 1.25rem;
+}
+
+@media screen and (max-width: 1280px) {
+	nav {
+		display: none;
+	}
+
+	main {
+		display: none;
+	}
+
+	body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	.WIP {
+		display: block;
+		font-size: 3rem;
+	}
+}
